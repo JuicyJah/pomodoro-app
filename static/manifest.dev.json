@@ -1,0 +1,15 @@
+{
+  "name": "Custom Pomodoro",
+  "short_name": "Pomodoro",
+  "start_url": "http://localhost:5173/",
+  "scope": "http://localhost:5173/",
+  "icons": [
+    {
+      "src": "pomodoro_icon.svg",
+      "sizes": "any"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#851BD8"
+}
