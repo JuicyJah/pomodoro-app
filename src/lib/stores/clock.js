@@ -1,4 +1,5 @@
 import { get, readable, writable } from 'svelte/store';
+import { FOCUS_INTERVAL, BREAK_INTERVAL, INTERMISSION_INTERVAL } from '$lib/config.js';
 
 function createStopWatch() {
 	const timeElapsed = readable(0, (set) => {
@@ -118,14 +119,11 @@ function createTimer(startTime = 0) {
 
 export const stopWatch = createStopWatch();
 
-const m25 = 25 * 60 * 1000;
 // 25 minute timer
-export const focus25 = createTimer(8000);
+export const focus25 = createTimer(FOCUS_INTERVAL);
 
-const m5 = 5 * 60 * 1000;
 // 5 minute timer
-export const break5 = createTimer(5000);
+export const break5 = createTimer(BREAK_INTERVAL);
 
-const m20 = 20 * 60 * 1000;
 // 20 minute timer
-export const break20 = createTimer(3000);
+export const break20 = createTimer(INTERMISSION_INTERVAL);
